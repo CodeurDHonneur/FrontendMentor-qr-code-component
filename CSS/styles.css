@@ -14,16 +14,81 @@
 }
 
 body {
-    font-family:Outfit;
+    font-family: Outfit;
     font-size: large;
     margin: 0;
 }
 
+p {
+    font-size: 15px;
+}
 
+a {
+    text-decoration: none;
+    color: black;
+}
+img{
+    width: 100%;
+    border: 1px solid none;
+    border-radius: 12px;
+}
 
+h1{
+    word-wrap: break-word;
+}
 /*******************************
 
 ********************************/
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+.text-en-gras {
+    font-weight: bold;
+}
+
+.texte-maj {
+    text-transform: uppercase;
+}
+
+.conteneur-principal {
+    max-width: 375px;
+    padding: 18px;
+    padding-right: 40px;
+    background-color: var(--color-slate-300);
+    text-align: center;
+    
+}
+
+.conteneur-enfant {
+    background-color: var(--color-white);
+    padding: 18px;
+    border: 1px solid none;
+    border-radius: 12px;
+}
+
+.main {
+    margin-bottom: 15px;
+}
+
+.conteneur,
+.header,
+.attribution {
+    padding: 20px;
+}
+
+@media screen and (min-width: 376px) {
+    .conteneur,
+    .header,
+    .attribution {
+        max-width: 375px;
+    }
+
+    .conteneur-principal {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
