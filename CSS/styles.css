@@ -15,7 +15,7 @@
 
 body {
     font-family: Outfit;
-    font-size: large;
+    font-size: 15px;
     margin: 0;
 }
 
@@ -54,7 +54,7 @@ h1{
 .conteneur-principal {
     max-width: 375px;
     padding: 18px;
-    padding-right: 40px;
+    padding-right: 20px;
     background-color: var(--color-slate-300);
     text-align: center;
     
@@ -91,4 +91,5 @@ h1{
         flex-direction: column;
         align-items: center;
     }
+   
 }
