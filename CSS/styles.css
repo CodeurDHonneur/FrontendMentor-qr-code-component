@@ -1,25 +1,29 @@
 @import url("./fonts.css");
 
-:root  {
+:root {
     --color-white: hsl(0, 0%, 100%);
     --color-slate-300: hsl(212, 45%, 89%);
     --color-slate-500: hsl(216, 15%, 48%);
     --color-slate-900: hsl(218, 44%, 22%);
+
+    --container-max-mobile: 375px;
+    --container-max-desktop: 800px;
+    
 }
 
-*, 
+*,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-body {
-    font-family: Outfit;
-    font-size: 15px;
+* {
     margin: 0;
+    padding: 0;
 }
 
-p {
+body {
+    font-family: Outfit, Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
 
@@ -27,21 +31,43 @@ a {
     text-decoration: none;
     color: black;
 }
-img{
+
+img {
+    display: block;
     width: 100%;
     border: 1px solid none;
     border-radius: 12px;
 }
 
-h1{
+h1 {
     word-wrap: break-word;
+    font-size: 1.5rem;
 }
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-slate-500);
+}
+
+.text-align-center {
+    text-align: center;
+}
+
 /*******************************
 
 ********************************/
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+    font-size: 11px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
 
 .text-en-gras {
     font-weight: bold;
@@ -52,12 +78,15 @@ h1{
 }
 
 .conteneur-principal {
-    max-width: 375px;
-    padding: 18px;
-    padding-right: 20px;
+    max-width: var(--container-max-mobile);
+    min-height: calc(100vh - 5rem);
     background-color: var(--color-slate-300);
-    text-align: center;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
 }
 
 .conteneur-enfant {
@@ -65,31 +94,26 @@ h1{
     padding: 18px;
     border: 1px solid none;
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.main {
-    margin-bottom: 15px;
-}
-
-.conteneur,
-.header,
-.attribution {
-    padding: 20px;
-}
 
 @media screen and (min-width: 376px) {
+
+    .conteneur-principal {
+        width: var(--container-max-desktop);
+        margin: 0 auto;
+        max-width: none;
+    }
+
+
     .conteneur,
     .header,
     .attribution {
-        max-width: 375px;
+        max-width: var(--container-max-mobile);
     }
 
-    .conteneur-principal {
-        max-width: 1440px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-   
+
 }
